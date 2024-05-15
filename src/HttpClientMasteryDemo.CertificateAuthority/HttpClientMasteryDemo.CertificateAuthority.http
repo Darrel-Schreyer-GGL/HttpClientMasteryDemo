@@ -1,0 +1,6 @@
+@HttpClientMasteryDemo.CertificateAuthority_HostAddress = https://localhost:7002
+
+GET {{HttpClientMasteryDemo.CertificateAuthority_HostAddress}}/latest
+Accept: application/json
+
+###
