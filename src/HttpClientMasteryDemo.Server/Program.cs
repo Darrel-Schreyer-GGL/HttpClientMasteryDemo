@@ -1,12 +1,16 @@
+using HttpClientMasteryDemo.CertificateClient;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCertificateClients();
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () =>
+app.MapGet("/", async context =>
 {
-    return "Cool";
+    await context.Response.WriteAsync("Cool!");
 });
 
 app.Run();
